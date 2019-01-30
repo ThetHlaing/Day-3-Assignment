@@ -18,14 +18,11 @@
         Final result should be "Albert Einstein"                
         */
 
-        var str = oldName;
+        const res = oldName.split(" ");
 
-        var res = str.split(" ");
+        res[0] = res[0].charAt(0).toUpperCase() + res[0].substr(1).toLowerCase();
+        res[1] = res[1].charAt(0).toUpperCase() + res[1].substr(1).toLowerCase();
 
-        const firstName = res[0].charAt(0).toUpperCase() + res[0].substr(1).toLowerCase();
-        const LastName = res[1].charAt(0).toUpperCase() + res[1].substr(1).toLowerCase();
-
-        const name = firstName + " " + LastName;
-        return name;
+        return res.join(" ");
     }
     console.log(nameFormatter(name));
